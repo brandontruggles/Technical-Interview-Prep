@@ -1,4 +1,4 @@
-# Topics covered so far
+# Topics Covered
 
 ## Cracking the Coding Interview
 
