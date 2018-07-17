@@ -1,8 +1,8 @@
-#Topics covered so far
+# Topics covered so far
 
-##Cracking the Coding Interview
+## Cracking the Coding Interview
 
-###Chapter 1 - Arrays and Strings
+### Chapter 1 - Arrays and Strings
 
 - [x] 1.1 - Is Unique
 - [x] 1.2 - Check Permutation
