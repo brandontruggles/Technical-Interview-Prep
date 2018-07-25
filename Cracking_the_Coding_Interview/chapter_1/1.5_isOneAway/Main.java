@@ -4,7 +4,13 @@
 
 public class Main {
 	public static void main(String [] args) {
+		System.out.println(BestSolution.isOneAway("b", "ba"));
 		System.out.println(BestSolution.isOneAway("ba", "b"));
+		System.out.println(BestSolution.isOneAway("bbbbbba", "bbbbba"));
+		System.out.println(BestSolution.isOneAway("bbbbbba", "bbbbbb"));
+		System.out.println(BestSolution.isOneAway("bbbbbba", "bbbbbbb"));
+		System.out.println(BestSolution.isOneAway("bbba", "bbbbbbb"));
+		System.out.println(BestSolution.isOneAway("", "bbbbbbb"));
 	}
 }
 

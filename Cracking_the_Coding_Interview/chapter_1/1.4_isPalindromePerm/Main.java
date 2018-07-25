@@ -1,5 +1,5 @@
 /*
-
+	See "generatePermutations" under Helpful_Problems for the naive solution to this.
 */
 
 import java.util.HashMap;

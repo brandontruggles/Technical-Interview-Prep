@@ -8,8 +8,10 @@ public class Main {
 	public static void main(String [] args) {
 		char[] inputArr = new char[] {'a', 'p', 'p', 'l', 'e', ' ', 'p', 'i', 'e', 0, 0, 0, 0 };
 		char[] inputArr2 = new char[] {'a', 'p', ' ', 'p', 'l', 'e', ' ', 'p', 'i', ' ', 'e', 0, 0, 0 , 0, 0, 0};
+		char[] inputArr3 = new char[] {'a', 'p', 'p', 'l', 'e'};
 		System.out.println(new String(BestSolution.URLify(inputArr, 9)));
 		System.out.println(new String(BestSolution.URLify(inputArr2, 11)));
+		System.out.println(new String(BestSolution.URLify(inputArr3, 5)));
 	}
 }
 

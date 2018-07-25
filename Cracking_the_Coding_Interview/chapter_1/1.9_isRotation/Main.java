@@ -25,7 +25,6 @@ class BestSolution {
 		for(int i = 0; i < s2.length(); i++) {
 			if(s2.charAt(i) == s1.charAt(pointerIdx)) {
 				pointerIdx++;
-				System.out.println(pointerIdx);
 				if(pointerIdx == s1.length() - 1) {
 					return true;
 				}
