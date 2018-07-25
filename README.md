@@ -1,4 +1,5 @@
-# Topics Covered (\* Indicates a problem I struggled to implement correctly and need to review later)
+# Topics Covered 
+#### (\* Indicates a problem I struggled to implement correctly and need to review later)
 
 ## Cracking the Coding Interview
 
