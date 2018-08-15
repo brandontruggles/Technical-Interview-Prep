@@ -23,6 +23,6 @@
 - [x] 2.4 - Partition
 - [x] 2.5 - Sum Lists
 - [x] 2.6 - Palindrome
-- [x] 2.7 - Intersection
+- [x] 2.7\* - Intersection -> The O(n) time and O(1) space solution to this problem was a little tricky, worth looking at again.
 - [x] 2.8\* - Loop Detection -> This one requires you to know the "Tortoise and the Hare" algorithm for its best solution. I would recommend reviewing this algorithm in detail, especially how to return the index of the start of the cycle.
 

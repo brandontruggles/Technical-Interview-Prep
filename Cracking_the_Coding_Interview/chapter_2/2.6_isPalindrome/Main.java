@@ -12,6 +12,18 @@ public class Main {
     Node list1 = generateList("kayak");
     outputList(list1);
     System.out.println(BestSolution.isPalindrome(list1));
+    Node list2 = generateList("anna");
+    outputList(list2);
+    System.out.println(BestSolution.isPalindrome(list2));
+    Node list3 = generateList("apple");
+    outputList(list3);
+    System.out.println(BestSolution.isPalindrome(list3));
+    Node list4 = generateList("a");
+    outputList(list4);
+    System.out.println(BestSolution.isPalindrome(list4));
+    Node list5 = generateList("ap");
+    outputList(list5);
+    System.out.println(BestSolution.isPalindrome(list5));
   }
 
   //Helper function to generate a linked list of a given word.
@@ -50,21 +62,35 @@ class BestSolution {
     Stack<Character> charStack = new Stack<Character>();
     Node ptr = head;
     Node ptrTwo = head.next;
-    while(ptrTwo != null && ptrTwo.next != null && ptrTwo.next.next != null) {
+    while(ptrTwo != null && ptrTwo.next != null) {
       charStack.push(ptr.value);
       ptr = ptr.next;
       ptrTwo = ptrTwo.next.next;
     }
+   
+    charStack.push(ptr.value);
+    if(ptrTwo != null) { //This will only happen in even-length lists.
+      ptr = ptr.next;
+    }
+
     
-    /*while(charStack.pop() == ptr.value) {
-      
-    }*/
+    while(charStack.size() > 0 && ptr != null) {
+      char val = charStack.pop();
+      if(val != ptr.value) {
+        return false;
+      }
+      ptr = ptr.next;
+    }
+
+    if(charStack.size() > 0) {
+      return false;
+    }
 
     return true;
   }
 }
 
-//Node class which holds an integer value for simplicity.
+//Node class which holds a char value for simplicity.
 class Node {
   public char value;
   public Node next;
