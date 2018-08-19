@@ -1,5 +1,5 @@
 /*
-
+  Here I used Floyd's "Tortoise and the Hare" algorithm to detect the loop and find the start of the loop in O(n) time, with O(1) space.
 */
 
 import java.util.Random;
@@ -9,14 +9,18 @@ public class Main {
 
   public static void main(String [] args) {
     Node list1 = generateList(10);
-    list1.next = list1;
+    outputList(list1);
+    list1.next.next = list1;
     System.out.println(BestSolution.findLoop(list1).value);
     Node list2 = generateList(5);
+    outputList(list2);
     System.out.println(BestSolution.findLoop(list2));
     Node list3 = null;
+    outputList(list3);
     System.out.println(BestSolution.findLoop(list3));
     Node list4 = generateList(10);
-    list4.next.next.next = list4;
+    outputList(list4);
+    list4.next.next.next.next.next = list4.next;
     System.out.println(BestSolution.findLoop(list4).value);
   }
   
@@ -53,8 +57,8 @@ class BestSolution {
     if(head == null || head.next == null) {
       return null;
     }
-    Node slow = head;
-    Node fast = head.next;
+    Node slow = head.next; //Be careful to initialize these to the correct values...slow must be increments of 1, fast increments of 2.
+    Node fast = head.next.next;
     while(slow != fast && slow.next != null && fast != null && fast.next != null) {
       slow = slow.next;
       fast = fast.next.next;
@@ -63,8 +67,6 @@ class BestSolution {
     if(isLoop) {
       slow = head;
       while(slow != fast) {
-        System.out.println("Slow: " + slow.value);
-        System.out.println("Fast: " + fast.value);
         slow = slow.next;
         fast = fast.next;
       }
